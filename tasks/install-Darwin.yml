@@ -1,0 +1,12 @@
+---
+- name: Install ZSH
+  homebrew:
+    name: zsh
+- name: Install ZSH Completions
+  homebrew:
+    name: zsh-completions
+- name: Ensure /usr/local/bin/zsh is added to /etc/shells
+  lineinfile:
+    dest: /etc/shells
+    line: /usr/local/bin/zsh
+  become: true

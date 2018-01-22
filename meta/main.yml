@@ -1,0 +1,22 @@
+galaxy_info:
+  author: Brian Hartsock
+  description: Simple role to install ZSH and ZSH completions.
+  license: MIT
+
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - 16.04
+    - name: MacOSX
+      verisons:
+        - all
+
+  galaxy_tags:
+    - zsh
+    - osx
+    - mac
+    - ubuntu
+
+dependencies: []
