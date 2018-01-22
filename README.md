@@ -1,6 +1,8 @@
 ZSH
 =========
 
+[![Build Status](https://travis-ci.org/brianhartsock/ansible-role-homebrew.svg?branch=master)](https://travis-ci.org/brianhartsock/ansible-role-homebrew)
+
 Simple role to install ZSH and ZSH completions.
 
 Requirements
