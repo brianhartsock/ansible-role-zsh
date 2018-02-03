@@ -2,17 +2,13 @@
 - name: Install ZSH
   apt:
     name: zsh
-  become: true
 - name: Add ZSH Completions repository key
   apt_key:
     url: https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_16.04/Release.key
-  become: true
 - name: Add ZSH Completions repository
   apt_repository:
     repo: "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_16.04/ /"
     filename: zsh-completions
-  become: true
 - name: Install ZSH completions
   apt:
     name: zsh-completions
-  become: true

@@ -10,6 +10,8 @@ Requirements
 
 Role has been tested on Ubuntu 16.04 and Mac OSX High Sierra. Although any operating system with a ZSH package should work.
 
+On Ubuntu, the role should be run as root with `become: true`. This is not required for OSX.
+
 Role Variables
 --------------
 
@@ -28,6 +30,7 @@ Including an example of how to use your role (for instance, with variables passe
     - hosts: servers
       roles:
          - brianhartsock.zsh
+           become: true
 
 License
 -------
