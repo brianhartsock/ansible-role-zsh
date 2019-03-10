@@ -4,3 +4,12 @@
   with_first_found:
     - "install-{{ ansible_os_family }}.yml"
     - "install.yml"
+- name: Get path to ZSH
+  command: which zsh
+  register: zsh_path
+  changed_when: no
+- name: Switch to zsh
+  user:
+    name: "{{ ansible_env.USER }}"
+    shell: "{{ zsh_path.stdout }}"
+  when: "'USER' in ansible_env"
