@@ -8,6 +8,7 @@
   command: which zsh
   register: zsh_path
   changed_when: no
+  check_mode: no
 - name: Switch to zsh
   user:
     name: "{{ ansible_env.USER }}"
