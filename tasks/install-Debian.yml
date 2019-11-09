@@ -2,13 +2,16 @@
 - name: Install ZSH
   apt:
     name: zsh
-- name: Add ZSH Completions repository key
-  apt_key:
-    url: https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_16.04/Release.key
-- name: Add ZSH Completions repository
-  apt_repository:
-    repo: "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_16.04/ /"
-    filename: zsh-completions
+# HACK - Manually installing from debian package file until keys are fixed.
+# https://github.com/zsh-users/zsh-completions/issues/657
+#
+# - name: Add ZSH Completions repository key
+#   apt_key:
+#     url: https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_{{ ansible_distribution_version }}/Release.key
+# - name: Add ZSH Completions repository
+#   apt_repository:
+#     repo: "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_{{ ansible_distribution_version }}/ /"
+#     filename: zsh-completions
 - name: Install ZSH completions
   apt:
-    name: zsh-completions
+    deb: https://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_{{ ansible_distribution_version }}/amd64/zsh-completions_0.31.0+1.1_amd64.deb # noqa 204
