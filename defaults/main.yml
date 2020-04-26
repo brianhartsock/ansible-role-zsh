@@ -1,2 +1,2 @@
 ---
-zsh_binary_url: https://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_{{ ansible_distribution_version }}/amd64/zsh-completions_0.31.0+1.1_amd64.deb # noqa 204
+zsh_completions_deb_url: https://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_{{ ansible_distribution_version }}/amd64/zsh-completions_0.31.0+1.1_amd64.deb # noqa 204

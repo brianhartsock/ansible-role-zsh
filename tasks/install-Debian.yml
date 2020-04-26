@@ -14,4 +14,4 @@
 #     filename: zsh-completions
 - name: Install ZSH completions binary
   apt:
-    deb: "{{ zsh_binary_url }}"
+    deb: "{{ zsh_completions_deb_url }}"
