@@ -12,6 +12,6 @@
 #   apt_repository:
 #     repo: "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_{{ ansible_distribution_version }}/ /"
 #     filename: zsh-completions
-- name: Install ZSH completions
+- name: Install ZSH completions binary
   apt:
-    deb: https://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_{{ ansible_distribution_version }}/amd64/zsh-completions_0.31.0+1.1_amd64.deb # noqa 204
+    deb: "{{ zsh_binary_url }}"
