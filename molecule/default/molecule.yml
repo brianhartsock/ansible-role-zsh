@@ -10,6 +10,8 @@ platforms:
     image: ubuntu:16.04
   - name: bionic
     image: ubuntu:18.04
+  - name: focal
+    image: ubuntu:20.04
 provisioner:
   name: ansible
   lint:
