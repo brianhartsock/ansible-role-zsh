@@ -56,7 +56,7 @@ colorama==0.4.1
     #   python-gilt
 cookiecutter==1.6.0
     # via molecule
-cryptography==2.8
+cryptography==3.3.2
     # via
     #   ansible-base
     #   paramiko
