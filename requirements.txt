@@ -141,7 +141,7 @@ python-dateutil==2.8.1
     # via arrow
 python-gilt==1.2.1
     # via molecule
-pyyaml==5.1.2
+pyyaml==5.4
     # via
     #   ansible-base
     #   ansible-lint
