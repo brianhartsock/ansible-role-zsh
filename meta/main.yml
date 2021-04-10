@@ -1,5 +1,6 @@
 galaxy_info:
-  name: brianhartsock.zsh
+  role_name: zsh
+  namespace: brianhartsock
   author: Brian Hartsock
   description: Simple role to install ZSH and ZSH completions.
   license: MIT
