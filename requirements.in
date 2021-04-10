@@ -1,2 +1,1 @@
-molecule[docker]
-pip-tools
+molecule[ansible,docker,lint]

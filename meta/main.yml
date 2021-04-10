@@ -1,4 +1,5 @@
 galaxy_info:
+  name: brianhartsock.zsh
   author: Brian Hartsock
   description: Simple role to install ZSH and ZSH completions.
   license: MIT
