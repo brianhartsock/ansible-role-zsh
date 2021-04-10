@@ -4,7 +4,10 @@ dependency:
 driver:
   name: docker
 lint: |
+  set -e
   yamllint .
+  ansible-lint
+  flake8
 platforms:
   - name: xenial
     image: ubuntu:16.04
@@ -18,9 +21,5 @@ provisioner:
     host_vars:
       focal:
         zsh_completions_deb_url: https://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_19.10/amd64/zsh-completions_0.31.0+1.1_amd64.deb
-  lint:
-    name: ansible-lint
 verifier:
   name: testinfra
-  lint:
-    name: flake8

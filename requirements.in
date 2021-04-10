@@ -1,1 +1,1 @@
-molecule[ansible,docker,lint]
+molecule[ansible,docker,lint,test]
