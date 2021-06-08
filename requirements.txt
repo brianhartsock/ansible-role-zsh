@@ -65,6 +65,8 @@ cryptography==3.4.7
     #   paramiko
 distlib==0.3.1
     # via virtualenv
+distro==1.5.0
+    # via selinux
 docker==5.0.0
     # via molecule-docker
 enrich==1.2.6
@@ -203,6 +205,10 @@ ruamel.yaml.clib==0.2.2
     # via ruamel.yaml
 ruamel.yaml==0.17.4
     # via ansible-lint
+selinux==0.2.1
+    # via
+    #   molecule
+    #   molecule-docker
 shellingham==1.4.0
     # via click-completion
 six==1.15.0
@@ -228,7 +234,7 @@ toml==0.10.2
     #   pytest
 typing-extensions==3.7.4.3
     # via rich
-urllib3==1.26.4
+urllib3==1.26.5
     # via requests
 virtualenv==20.4.3
     # via pre-commit
