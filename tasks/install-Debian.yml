@@ -2,16 +2,13 @@
 - name: Install ZSH
   apt:
     name: zsh
-# HACK - Manually installing from debian package file until keys are fixed.
-# https://github.com/zsh-users/zsh-completions/issues/657
-#
-# - name: Add ZSH Completions repository key
-#   apt_key:
-#     url: https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_{{ ansible_distribution_version }}/Release.key
-# - name: Add ZSH Completions repository
-#   apt_repository:
-#     repo: "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_{{ ansible_distribution_version }}/ /"
-#     filename: zsh-completions
-- name: Install ZSH completions binary
+- name: Add ZSH Completions repository key
+  apt_key:
+    url: https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_{{ ansible_distribution_version }}/Release.key
+- name: Add ZSH Completions repository
+  apt_repository:
+    repo: "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_{{ ansible_distribution_version }}/ /"
+    filename: zsh-completions
+- name: Install ZSH completions
   apt:
-    deb: "{{ zsh_completions_deb_url }}"
+    name: zsh-completions
