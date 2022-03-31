@@ -18,7 +18,7 @@ arrow==1.1.1
     # via jinja2-time
 attrs==21.2.0
     # via pytest
-backports.entry-points-selectable==1.1.0
+backports-entry-points-selectable==1.1.0
     # via virtualenv
 bcrypt==3.2.0
     # via paramiko
@@ -60,6 +60,8 @@ cryptography==3.4.8
     #   paramiko
 distlib==0.3.3
     # via virtualenv
+distro==1.7.0
+    # via selinux
 docker==5.0.2
     # via molecule-docker
 enrich==1.2.6
@@ -103,7 +105,7 @@ packaging==21.0
     #   ansible-core
     #   molecule
     #   pytest
-paramiko==2.7.2
+paramiko==2.10.1
     # via molecule
 pathspec==0.9.0
     # via yamllint
@@ -189,10 +191,15 @@ rich==10.11.0
     # via
     #   enrich
     #   molecule
+selinux==0.2.1
+    # via
+    #   molecule
+    #   molecule-docker
 six==1.16.0
     # via
     #   bcrypt
     #   cookiecutter
+    #   paramiko
     #   pynacl
     #   pytest-verbose-parametrize
     #   python-dateutil
