@@ -9,8 +9,18 @@
   register: zsh_path
   changed_when: no
   check_mode: no
-- name: Switch to zsh
+- name: Switch to zsh (Mac)
   user:
     name: "{{ ansible_env.USER }}"
     shell: "{{ zsh_path.stdout }}"
-  when: "'USER' in ansible_env"
+  when:
+    - "'USER' in ansible_env"
+    - ansible_distribution == 'MacOSX'
+  become: yes
+- name: Switch to zsh (Linux)
+  user:
+    name: "{{ ansible_env.USER }}"
+    shell: "{{ zsh_path.stdout }}"
+  when:
+    - "'USER' in ansible_env"
+    - ansible_distribution != 'MacOSX'
