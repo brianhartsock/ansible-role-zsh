@@ -26,7 +26,7 @@ binaryornot==0.4.4
     # via cookiecutter
 cerberus==1.3.2
     # via molecule
-certifi==2021.5.30
+certifi==2022.12.7
     # via requests
 cffi==1.14.6
     # via
