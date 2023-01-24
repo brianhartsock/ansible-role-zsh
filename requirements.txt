@@ -6,13 +6,13 @@
 #
 ansi2html==1.6.0
     # via molecule
-ansible==4.6.0
+ansible==7.0.0
     # via molecule
 ansible-compat==0.5.0
     # via
     #   molecule
     #   molecule-docker
-ansible-core==2.11.5
+ansible-core==2.14.1
     # via ansible
 arrow==1.1.1
     # via jinja2-time
