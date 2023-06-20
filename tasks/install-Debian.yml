@@ -1,14 +1,14 @@
 ---
 - name: Install ZSH
-  apt:
+  ansible.builtin.apt:
     name: zsh
 - name: Add ZSH Completions repository key
-  apt_key:
+  ansible.builtin.apt_key:
     url: https://download.opensuse.org/repositories/shells:zsh-users:zsh-completions/xUbuntu_{{ ansible_distribution_version }}/Release.key
 - name: Add ZSH Completions repository
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_{{ ansible_distribution_version }}/ /"
     filename: zsh-completions
 - name: Install ZSH completions
-  apt:
+  ansible.builtin.apt:
     name: zsh-completions

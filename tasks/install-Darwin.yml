@@ -1,12 +1,12 @@
 ---
 - name: Install ZSH
-  homebrew:
+  community.genera..homebrew:
     name: zsh
 - name: Install ZSH Completions
-  homebrew:
+  community.general.homebrew:
     name: zsh-completions
 - name: Ensure /usr/local/bin/zsh is added to /etc/shells
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /etc/shells
     line: /usr/local/bin/zsh
   become: true

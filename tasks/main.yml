@@ -1,16 +1,16 @@
 ---
 - name: Include specific operating system installation instructions
-  include_tasks: "{{ item }}"
+  ansible.builtin.include_tasks: "{{ item }}"
   with_first_found:
     - "install-{{ ansible_os_family }}.yml"
     - "install.yml"
 - name: Get path to ZSH
-  command: which zsh
+  ansible.builtin.command: which zsh
   register: zsh_path
   changed_when: no
   check_mode: no
 - name: Switch to zsh (Mac)
-  user:
+  ansible.builtin.user:
     name: "{{ ansible_env.USER }}"
     shell: "{{ zsh_path.stdout }}"
   when:
@@ -18,7 +18,7 @@
     - ansible_distribution == 'MacOSX'
   become: yes
 - name: Switch to zsh (Linux)
-  user:
+  ansible.builtin.user:
     name: "{{ ansible_env.USER }}"
     shell: "{{ zsh_path.stdout }}"
   when:
