@@ -1,5 +1,9 @@
 ---
 - name: Converge
   hosts: all
+  pre_tasks:
+    - name: Update apt cache.
+      ansible.builtin.package:
+        update_cache: true
   roles:
     - role: brianhartsock.zsh
