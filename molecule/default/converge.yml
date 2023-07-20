@@ -1,13 +1,5 @@
 ---
 - name: Converge
   hosts: all
-  pre_tasks:
-    - name: Update apt cache.
-      ansible.builtin.package:
-        update_cache: true
-    - name: Install GPG
-      ansible.builtin.apt:
-        name: gnupg2
-
   roles:
     - role: brianhartsock.zsh
