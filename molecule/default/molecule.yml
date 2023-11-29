@@ -9,8 +9,6 @@ lint: |
   ansible-lint
   flake8
 platforms:
-  - name: xenial
-    image: ubuntu:16.04
   - name: bionic
     image: ubuntu:18.04
   - name: focal
