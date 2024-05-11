@@ -39,7 +39,7 @@ click==8.1.7
     #   molecule
 click-help-colors==0.9.4
     # via molecule
-cryptography==42.0.5
+cryptography==42.0.7
     # via ansible-core
 docker==7.0.0
     # via molecule-plugins
@@ -55,7 +55,7 @@ idna==3.7
     # via requests
 iniconfig==2.0.0
     # via pytest
-jinja2==3.1.3
+jinja2==3.1.4
     # via
     #   ansible-core
     #   molecule
@@ -108,7 +108,7 @@ pycparser==2.22
     # via cffi
 pyflakes==3.2.0
     # via flake8
-pygments==2.17.2
+pygments==2.18.0
     # via rich
 pytest==8.2.0
     # via pytest-testinfra
@@ -136,7 +136,7 @@ rich==13.7.1
     #   ansible-lint
     #   enrich
     #   molecule
-rpds-py==0.18.0
+rpds-py==0.18.1
     # via
     #   jsonschema
     #   referencing
