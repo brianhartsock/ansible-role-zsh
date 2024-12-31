@@ -11,6 +11,8 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - focal
+        - jammy
+        - noble
     - name: MacOSX
       verisons:
         - all
