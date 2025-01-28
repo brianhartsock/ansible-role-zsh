@@ -8,7 +8,6 @@
   ansible.builtin.command: which zsh
   register: zsh_path
   changed_when: no
-  when: not ansible_check_mode
 - name: Switch to zsh (Mac)
   ansible.builtin.user:
     name: "{{ ansible_env.USER }}"
