@@ -7,7 +7,7 @@
 - name: Get path to ZSH
   ansible.builtin.command: which zsh
   register: zsh_path
-  changed_when: no
+  changed_when: false
 - name: Switch to zsh (Mac)
   ansible.builtin.user:
     name: "{{ ansible_env.USER }}"
@@ -15,7 +15,7 @@
   when:
     - "'USER' in ansible_env"
     - ansible_distribution == 'MacOSX'
-  become: yes
+  become: true
 - name: Switch to zsh (Linux)
   ansible.builtin.user:
     name: "{{ ansible_env.USER }}"
