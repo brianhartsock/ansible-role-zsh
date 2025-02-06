@@ -1,12 +1,11 @@
 ---
 - name: Prepare
   hosts: all
+  check_mode: false
   tasks:
     - name: Update apt cache.
       ansible.builtin.package:
         update_cache: true
-      check_mode: no
     - name: Install GPG
       ansible.builtin.apt:
         name: gnupg2
-      check_mode: no

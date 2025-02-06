@@ -30,7 +30,7 @@ scenario:
     - prepare
     - converge
     # Skipping idempotence since it is check_mode
-    #- idempotence
+    # idempotence
     - side_effect
     - verify
     - cleanup

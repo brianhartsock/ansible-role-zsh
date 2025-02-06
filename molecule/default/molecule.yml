@@ -20,6 +20,9 @@ provisioner:
   inventory:
     host_vars:
       focal:
-        zsh_completions_deb_url: https://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/xUbuntu_19.10/amd64/zsh-completions_0.31.0+1.1_amd64.deb
+        zsh_completions_deb_url: >-
+          https://download.opensuse.org/repositories/shells:
+            /zsh-users:/zsh-completions/xUbuntu_19.10/amd64/
+            zsh-completions_0.31.0+1.1_amd64.deb
 verifier:
   name: testinfra
