@@ -23,3 +23,5 @@
   when:
     - "'USER' in ansible_env"
     - ansible_distribution != 'MacOSX'
+    # Check mode is showing changes even when the user is already set to zsh
+    - "not ansible_check_mode"
