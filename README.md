@@ -7,7 +7,7 @@ Simple role to install ZSH and ZSH completions.
 Requirements
 ------------
 
-Role has been tested on Ubuntu 20.04, 22.04, 24.04, and Mac OSX Sonoma. Although any operating system with a ZSH package should work.
+Role has been tested on Ubuntu 22.04, 24.04, and Mac OSX Sonoma. Although any operating system with a ZSH package should work.
 
 On Ubuntu, the role should be run as root with `become: true`. This is not required for OSX.
 
