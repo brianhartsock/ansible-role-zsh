@@ -1,2 +1,6 @@
 # Ansible files
 *.retry
+.ansible
+
+# Python
+.venv/
