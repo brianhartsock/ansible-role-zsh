@@ -2,7 +2,7 @@
 - name: Include specific operating system installation instructions
   ansible.builtin.include_tasks: "{{ item }}"
   with_first_found:
-    - "install-{{ ansible_os_family }}.yml"
+    - "install-{{ ansible_facts['os_family'] }}.yml"
     - "install.yml"
 - name: Get path to ZSH
   ansible.builtin.command: which zsh
@@ -10,18 +10,18 @@
   changed_when: false
 - name: Switch to zsh (Mac)
   ansible.builtin.user:
-    name: "{{ ansible_env.USER }}"
+    name: "{{ ansible_facts['env']['USER'] }}"
     shell: "{{ zsh_path.stdout }}"
   when:
-    - "'USER' in ansible_env"
-    - ansible_distribution == 'MacOSX'
+    - "'USER' in ansible_facts['env']"
+    - ansible_facts['distribution'] == 'MacOSX'
   become: true
 - name: Switch to zsh (Linux)
   ansible.builtin.user:
-    name: "{{ ansible_env.USER }}"
+    name: "{{ ansible_facts['env']['USER'] }}"
     shell: "{{ zsh_path.stdout }}"
   when:
-    - "'USER' in ansible_env"
-    - ansible_distribution != 'MacOSX'
+    - "'USER' in ansible_facts['env']"
+    - ansible_facts['distribution'] != 'MacOSX'
     # Check mode is showing changes even when the user is already set to zsh
     - "not ansible_check_mode"
