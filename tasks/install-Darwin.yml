@@ -1,6 +1,6 @@
 ---
 - name: Install ZSH
-  community.genera..homebrew:
+  community.general.homebrew:
     name: zsh
 - name: Install ZSH Completions
   community.general.homebrew:
